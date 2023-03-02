@@ -1,1 +1,8 @@
+# node moduels
 node_modules
+
+# mac ds_store
+.DS_Stroe
+
+# vscode modules
+.vscode
