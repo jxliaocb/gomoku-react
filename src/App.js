@@ -88,14 +88,17 @@ export default function App() {
     <Wrapper>
       <GameTitle>Gomoku</GameTitle>
       <div>
-        <lable>Board size</lable>
-        <input type="text" placeholder="Board size" value={text}
+        <lable>Board size: </lable>
+        <input type="text" placeholder="9-19" value={text}
           onChange={e => setText(e.target.value)}/>
         <button onClick={()=>{
           let size = Number(text)
-          if (typeof(size) === "number" && numSize !== size){
+          if (size && numSize !== size && size >= 9 && size <= 19){
             setNumSize(size)
             restart(size)
+          }
+          else{
+            setText("")
           }
         }}>Ok</button>
       </div>
